@@ -130,3 +130,20 @@ nav ul li a:hover {
 #form-kontak button:hover {
     background-color: #34495e;
 }
+/* Kelas ini akan ditempelkan oleh JavaScript saat layar di-scroll */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Memastikan menu selalu berada di paling depan/atas elemen lain */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Memberi bayangan halus saat melayang */
+    background-color: #1a252f; /* Menjaga warna tetap solid */
+    padding: 10px 20px; /* Sedikit memperkecil padding agar lebih estetik saat melayang */
+    transition: all 0.3s ease; /* Efek animasi halus saat berubah jadi melayang */
+}
+
+/* Tambahan agar konten di bawah header tidak kaget/lompat saat header berubah jadi fixed */
+body {
+    transition: padding-top 0.3s ease;
+}

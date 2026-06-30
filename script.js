@@ -23,3 +23,19 @@ form.addEventListener('submit', function(event) {
     
     form.reset(); // Mengosongkan kembali isi formulir setelah selesai dikirim
 });
+// Mengambil elemen header
+const header = document.querySelector('header');
+
+// Mengambil posisi awal header dari atas layar
+const posisiHeaderAwal = header.offsetTop;
+
+// Mendengarkan setiap kali layar di-scroll oleh pengguna
+window.addEventListener('scroll', function() {
+    if (window.scrollY > posisiHeaderAwal) {
+        // Jika layar di-scroll melewati posisi awal header, tambahkan kelas .sticky
+        header.classList.add('sticky');
+    } else {
+        // Jika kembali ke paling atas, hapus kelas .sticky
+        header.classList.remove('sticky');
+    }
+});
